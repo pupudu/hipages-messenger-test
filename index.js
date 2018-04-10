@@ -64,3 +64,7 @@ app.get('/webhook', (req, res) => {
 app.get('/notify', (req, res)=>{
    console.log(req.body);
 });
+
+app.post('/notify', (req, res)=>{
+    console.log("doda", req.body)
+});
