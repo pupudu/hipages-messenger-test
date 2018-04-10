@@ -60,3 +60,7 @@ app.get('/webhook', (req, res) => {
     }
   }
 });
+
+app.get('/notify', (req, res)=>{
+   console.log(req.body);
+});
