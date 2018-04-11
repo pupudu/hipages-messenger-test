@@ -7,7 +7,7 @@ const
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
-app.use(express.bodyParser({
+app.use(bodyParser({
     limit: '50mb'
 }));
 
