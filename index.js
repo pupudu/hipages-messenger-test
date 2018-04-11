@@ -7,9 +7,8 @@ const
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
-app.use(bodyParser({
-    limit: '50mb'
-}));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 // Creates the endpoint for our webhook 
 app.post('/webhook', (req, res) => {  
